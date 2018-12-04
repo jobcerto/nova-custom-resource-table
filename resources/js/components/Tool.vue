@@ -1,5 +1,5 @@
 <template>
-	<table cellpadding="0" cellspacing="0" class="table w-full">
+	<table ref="custom-resource-table" cellpadding="0" cellspacing="0" class="table w-full">
 		<thead>
 			<tr>
 				<th class="text-left" v-for="heading in field.headings">
@@ -26,7 +26,8 @@
 		props: ['resourceName', 'resourceId', 'field'],
 
 		mounted() {
-            //
+            this.$refs['custom-resource-table'].parentElement.classList.remove('py-3');
+            this.$refs['custom-resource-table'].parentElement.classList.remove('px-6');
         },
 
         computed: {

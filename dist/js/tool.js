@@ -269,7 +269,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   props: ['resourceName', 'resourceId', 'field'],
 
   mounted: function mounted() {
-    //
+    this.$refs['custom-resource-table'].parentElement.classList.remove('py-3');
+    this.$refs['custom-resource-table'].parentElement.classList.remove('px-6');
   },
 
 
@@ -291,6 +292,7 @@ var render = function() {
   return _c(
     "table",
     {
+      ref: "custom-resource-table",
       staticClass: "table w-full",
       attrs: { cellpadding: "0", cellspacing: "0" }
     },
